@@ -1,0 +1,29 @@
+[project]
+name = "statsmodels-intro"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "marimo>=0.14.7",
+    "matplotlib>=3.10.7",
+    "python-lsp-server>=1.12.2",
+    "scipy<=1.15.3",
+    "statsmodels>=0.14.4",
+    "streamlit>=1.46.0",
+]
+
+
+# Language server configuration
+[tool.marimo.language_servers.pylsp]
+enabled = true               # Enable/disable the Python language server
+enable_mypy = true           # Type checking with mypy (enabled by default, if installed)
+enable_ruff = true           # Linting with ruff (enabled by default, if installed)
+enable_flake8 = false        # Linting with flake8
+enable_pydocstyle = false    # Check docstring style
+enable_pylint = false        # Linting with pylint
+enable_pyflakes = false      # Syntax checking with pyflakes
+
+# Diagnostics configuration
+[tool.marimo.diagnostics]
+enabled = true          
